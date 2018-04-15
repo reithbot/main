@@ -15,4 +15,4 @@ install:
   - git fetch --unshallow || true
 
 script:
-  - docker run --rm -t -e GH_TOKEN  -v cache/gitsplit:/cache/gitsplit -v ${PWD}:/srv jderusse/gitsplit
+  - docker run --rm -t -e GH_TOKEN  -v ${PWD}/cache/gitsplit:/cache/gitsplit -v ${PWD}:/srv jderusse/gitsplit
