@@ -1,0 +1,18 @@
+sudo: required
+services:
+  - docker
+
+cache:
+  directories:
+    - /cache/gitsplit
+
+install:
+  - docker pull jderusse/gitsplit
+
+  # update local repository. Because travis fetch a shallow copy
+  - git config remote.origin.fetch "+refs/*:refs/*"
+  - git config remote.origin.mirror true
+  - git fetch --unshallow
+
+script:
+  - docker run --rm -t -v /cache/gitsplit:/cache/gitsplit -v ${PWD}:/srv jderusse/gitsplit

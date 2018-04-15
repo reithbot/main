@@ -1,0 +1,5 @@
+cache_dir: "/cache/gitsplit"
+
+splits:
+    - prefix: "php"
+      target: git@github.com:reithbot/toyrobot-php.git
