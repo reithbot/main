@@ -2,4 +2,4 @@ cache_dir: "cache/gitsplit"
 
 splits:
     - prefix: "php"
-      target: "https://${GH_TOKEN}@github.com:reithbot/toyrobot-php.git
+      target: "https://${GH_TOKEN}@github.com:reithbot/toyrobot-php.git"
